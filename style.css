@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --purple500:#281154;
+    --purple300:#270082;
+    --purple600:#1b0058;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Header */
+
+header{
+    background-color: var(--purple300);
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    
+    padding: 10px 60px;
+}
+
+.logo{
+    font-size: 32px;
+    font-weight: 600;
+
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    align-items: center;
+}
+nav ul{
+    list-style: none; /* listeleme noktaların gitmesi için */
+    display: flex;
+    gap: 40px;
+}
+nav ul li{
+    border-bottom: 2px solid transparent;
+    color: white;
+    transition: border 0.3s;
+}
+nav ul li:hover{
+border-bottom: 2px solid white;
+}
+.hamburger-menu{
+    display: none;
+    font-size: 35px;
+}
+
+@media screen and (max-width:650px) {
+    header{
+        padding: 5px 10px;
+    }
+    .logo{
+        font-size: 25px;
+    }
+    ul{
+        display: none;
+    }
+    nav ul{
+        gap: 10px;
+    }
+
+    .hamburger-menu{
+        display: flex;
+    }
+}
+
+/* Hero */
+
+.hero-section{
+    background-image: url(/img/box-f1.jpg);
+    background-size: cover ;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: white;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 0 20px;
+
+
+}
+.hero-section .container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+}
+.hero-section h1{
+    font-size: 95px;
+}
+.hero-section h3{
+    font-size: 32px;
+}
+.hero-section p{
+    max-width: 900px;
+}
+@media screen and (max-width:950px) {
+    .hero-section .container{
+        gap: 25px;
+    }
+    .hero-section{
+        font-size: 55px;
+    }
+    .hero-section h3{
+        font-size: 25px;
+    }
+    
+}
+
+@media screen and(max-width: 600px) {
+    .hero-section .container{
+        gap: 15px;
+    }
+    .hero-section h1{
+        font-size: 35px;
+    }
+    .hero-section h3{
+        font-size: 20px;
+    }
+}
